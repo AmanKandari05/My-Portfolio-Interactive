@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Kandari - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="darkToggle">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Hi, I'm Aman Kandari</h1>
+      <p>Aspiring Web Developer | Designer | Tech Enthusiast | Creator </p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+       I am Aman Kandari from Dehradun, a Computer Science Engineering graduate from Graphic Era Hill University. 
+          I have a strong command of C, C++, Python, Java, SQL, and HTML. Passionate and goal-oriented,
+           I am always eager to learn and embrace new challenges. My short-term goal is to secure a position 
+           in a reputed company where I can apply my skills and grow professionally. In the long run, 
+           I aspire to make a significant impact in the field of engineering. With a proactive mindset and a drive for excellence,
+            I am committed to continuous learning and contributing effectively to any team.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Interests</h2>
+      <div class="flex-lists">
+        <div>
+          <h3>Skills</h3>
+          <ul>
+            <li>C,C++</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Html,CSS,JS</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Interests</h3>
+          <ul>
+            <li>Travelling</li>
+            <li>Watching Movies</li>
+            <li>Swimming</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+           <h3>Project 1</h3>
+        <p>•	Deepfake Image Detection: A deep learning pipeline for detecting deepfake images.
+            It utilises a Convolutional Neural Network built with TensorFlow/Keras, designed to distinguish between real and fake images.
+             <br><a href="https://github.com/AmanKandari05/DeepfakeDetection" style="border: solid  black; background-color: black; color: rgb(0, 102, 255); ">View Project</a></p>
+        </div>
+        <div class="card">
+          <h3>Project 2</h3>
+        <p>•	Process Scheduler: Designed and developed a Process Scheduler Simulator that demonstrates the working of different scheduling algorithms.
+             The Scheduler supports First-Come First Serve(FCFS), Shortest Job First (SJF) etc.
+             <br><a href="https://github.com/AmanKandari05/Process-Schedular" style="border: solid  black; background-color: black; color: rgb(0, 102, 255); ">View Project</a></p>
+        </div>
+        <div class="card">
+          <h3>Project 3</h3>
+        <p>•	Mini Compiler: Developed a web-based compiler frontend using Flask that performs lexical analysis, parsing, 
+            semantic checks, and generates intermediate code for C/C++ Python programs. The system provides user-friendly interface
+             for code input and display tokens, syntax and semantic errors and IR, demonstrating key compiler phases.
+             <br><a href="https://github.com/AmanKandari05/Mini-Compiler" style="border: solid  black; background-color: black; color: rgb(0, 102, 255); ">View Project</a></p>  
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Connect with me: 
+      <p>Email: <a href="mailto:amangehuwork124@gamil.com">amangehuwork124@gamil.com</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/aman-kandari-470483263?trk=people-guest_people_search-card&originalSubdomain=in">LinkedIn</a> | 
+            <a href="https://github.com/AmanKandari05">GitHub</a>
+        </p>
+    </p>
+    <p>&copy; 2025 Your Name</p>
+    <button id="topBtn">⬆ Top</button>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.onclick = () => {
+      document.body.classList.toggle('dark');
+    };
+
+    const topBtn = document.getElementById('topBtn');
+    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+</body>
+</html>
