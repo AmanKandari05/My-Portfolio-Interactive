@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +11,15 @@ body {
   background: #f4f4f4;
   color: #333;
   padding-top: 60px;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 
 body.dark {
   background-color: #1e1e1e;
   color: #f0f0f0;
 }
+
 
 header {
   position: fixed;
@@ -27,26 +31,55 @@ header {
   z-index: 999;
 }
 
-nav ul {
+nav {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-container {
   display: flex;
+  align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
   list-style: none;
+  gap: 30px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a,
-nav ul li button {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-size: 16px;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
+
+#bulbButton {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#bulbButton.on {
+  background-color: #ffeb3b;
+  box-shadow: 0 0 15px 4px #ffff66;
+}
+
+
+/* Hero section */
 #hero {
   text-align: center;
   padding: 60px 20px;
@@ -57,6 +90,7 @@ body.dark #hero {
   background-color: #2a2a2a;
 }
 
+/* Main sections */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -67,6 +101,7 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Skills and Interests */
 .flex-lists {
   display: flex;
   justify-content: space-between;
@@ -82,6 +117,7 @@ h2 {
   list-style-type: square;
 }
 
+/* Project cards */
 .project-cards {
   display: flex;
   gap: 20px;
@@ -101,6 +137,7 @@ body.dark .card {
   color: white;
 }
 
+/* Contact form */
 form {
   display: flex;
   flex-direction: column;
@@ -120,6 +157,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: #0056b3;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -145,6 +187,7 @@ footer a {
   border-radius: 5px;
 }
 
+
 @media (max-width: 768px) {
   .flex-lists {
     flex-direction: column;
@@ -159,7 +202,12 @@ footer a {
     align-items: center;
   }
 
+  nav ul li.spacer {
+    display: none;
+  }
+
   nav ul li {
     margin: 10px 0;
   }
 }
+
